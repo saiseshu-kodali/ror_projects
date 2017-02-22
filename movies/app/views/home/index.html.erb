@@ -1,0 +1,8 @@
+<h2>welcome to my first rails page #saiseshu</h2>
+
+
+<%= form_tag("/search", method: "get") do %>
+<%= label_tag(:q, "search for:") %>
+<%= text_field_tag(:q) %>
+<%= submit_tag("Search") %>
+<% end %>

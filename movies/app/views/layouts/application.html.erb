@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="main-out">
+<div class="main">
+<div class="page">
+<div class="top">
+<div class="header">
+<div class="header-top">
+<h1>My <span>FirstApp</span></h1>
+<p>Call Us: 000 0000 000</p>
+</div>
+<div class="topmenu">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#">About&nbsp;Us</a></li>
+  <li><a href="#">What's&nbsp;New</a></li>
+  <li><a href="#">Services</a></li>
+  
+ <% if session[:admin] %>
+  <li>Admin logged in...</li>
+  <li><a href="/admin/logout">Logout</a></li>
+ <% else %>
+  <li><a href="/admin/login">Login</a></li>
+ <% end %>
+  <li><a href="#">Resources</a></li>
+  
+
+</ul>
+</div>
+<div class="header-img">
+<h2>Saiseshu Kodali</h2>
+</div>
+</div>
+<div class="content">
+<div class="content-left">
+<div class="row1">
+<div class="img"><img src="/assets/img1.jpg" alt="" height="101"
+ width="157"></div>
+<div class="welcome">
+<h1 class="title">Welcome to <span>My First App</span></h1>
+
+<%= yield %>
+
+</div>
+</div>
+<div class="row2">
+<div class="section1">
+<h2 class="subtitle">What&#8217;s New</h2>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="#" class="more">read more</a></p>
+</div>
+<div class="section2">
+<h2 class="subtitle">Resources</h2>
+
+<p>&nbsp;</p>
+<p><a href="#" class="more">read more</a></p>
+</div>
+</div>
+</div>
+<div class="content-right">
+<h2>Main Menu</h2>
+<ul>
+  <li style="border-top: medium none;"><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+  <li><a href="#">Link 5</a></li>
+  <li><a href="#">Link 6</a></li>
+  <li><a href="#">Link 7</a></li>
+  <li><a href="#">Link 8</a></li>
+  <li><a href="#">Link 9</a></li>
+  <li><a href="#">Link 10</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="bottom">
+<ul>
+  <li style="border-left: medium none;"><a href="index.html">Home</a></li>
+  <li><a href="#">About&nbsp;Us</a></li>
+  <li><a href="#">What's&nbsp;New</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">Resources</a></li>
+  <li><a href="#">Links</a></li>
+</ul>
+
+<!--DO NOT Remove The Footer Links-->
+<p>&copy; Copyright 2014. Designed by <a target="_blank" href="http://www.usaonlinecasinos.org">usaonlinecasinos.org</a></p>
+<!--Designed by--><a target="_blank" href="http://www.usaonlinecasinos.org">
+<img src="/assets/footnote.gif" class="copyright" alt="http://www.usaonlinecasinos.org"></a></div>
+<!--DO NOT Remove The Footer Links-->
+</div>
+</div>
+</div>
+
+</body>
+</html>
